@@ -1,0 +1,44 @@
+﻿@model AgriculturePresentation.Models.UserEditViewModel
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<div class="col-12 grid-margin stretch-card">
+              <div class="card">
+                <div class="card-body">
+                  <h4 class="card-title">Profil Düzenle Sayfası</h4>
+
+                  <form class="forms-sample" method="post">
+               
+                    <div class="form-group">
+                      <label for="exampleInputName1">Mail Adresi</label>
+                      <input type="text" class="form-control" asp-for="Mail" placeholder="Mail">
+                    </div>
+
+                    <div class="form-group">
+                      <label for="exampleInputEmail3">Telefon Numarası </label>
+                      <input type="text" class="form-control" asp-for="Phone" placeholder="Telefon Numarası">
+                    </div>
+
+                    <div class="form-group">
+                      <label for="exampleInputEmail3">Şifre </label>
+                      <input type="text" class="form-control" asp-for="Password" placeholder="Şifre">
+                    </div>
+
+                    <div class="form-group">
+                      <label for="exampleInputEmail3">Şifre Tekrar </label>
+                      <input type="text" class="form-control" asp-for="ConfirmPassword" placeholder="Şifre Tekrar">
+                    </div>
+
+                 
+
+
+
+                    <button type="submit" class="btn btn-outline-success">Güncelle</button>
+
+                  </form>
+                </div>
+              </div>
+            </div>
+
