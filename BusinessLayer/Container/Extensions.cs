@@ -13,28 +13,29 @@ namespace BusinessLayer.Container
 {
     public static class Extensions
     {
-        public static void ContainerDependencies(this IServiceCollection services)
+        public static IServiceCollection ContainerDependencies(this IServiceCollection services)
         {
 
-            builder.Services.AddScoped<IServiceService, ServiceManager>();
-            builder.Services.AddScoped<IServiceDal, EfServiceDal>();
-            builder.Services.AddScoped<ITeamService, TeamManager>();
-            builder.Services.AddScoped<ITeamDal, EfTeamDal>();
-            builder.Services.AddScoped<IAnnouncementService, AnnouncementManager>();
-            builder.Services.AddScoped<IAnnouncementDal, EfAnnouncementDal>();
-            builder.Services.AddScoped<IImageService, ImageManager>();
-            builder.Services.AddScoped<IImageDal, EfImageDal>();
-            builder.Services.AddScoped<IAddressService, AddressManager>();
-            builder.Services.AddScoped<IAddressDal, EfAddressDal>();
-            builder.Services.AddScoped<IContactService, ContactManager>();
-            builder.Services.AddScoped<IContactDal, EfContactDal>();
-            builder.Services.AddScoped<ISocialMediaService, SocialMediaManager>();
-            builder.Services.AddScoped<ISocialMediaDal, EfSocialMediaDal>();
-            builder.Services.AddScoped<IAboutService, AboutManager>();
-            builder.Services.AddScoped<IAboutDal, EfAboutDal>();
-            builder.Services.AddScoped<IAdminService, AdminManager>();
-            builder.Services.AddScoped<IAdminDal, EfAdminDal>();
-        }
+           services.AddScoped<IServiceService, ServiceManager>();
+           services.AddScoped<IServiceDal, EfServiceDal>();
+           services.AddScoped<ITeamService, TeamManager>();
+           services.AddScoped<ITeamDal, EfTeamDal>();
+           services.AddScoped<IAnnouncementService, AnnouncementManager>();
+           services.AddScoped<IAnnouncementDal, EfAnnouncementDal>();
+           services.AddScoped<IImageService, ImageManager>();
+           services.AddScoped<IImageDal, EfImageDal>();
+           services.AddScoped<IAddressService, AddressManager>();
+           services.AddScoped<IAddressDal, EfAddressDal>();
+           services.AddScoped<IContactService, ContactManager>();
+           services.AddScoped<IContactDal, EfContactDal>();
+           services.AddScoped<ISocialMediaService, SocialMediaManager>();
+           services.AddScoped<ISocialMediaDal, EfSocialMediaDal>();
+           services.AddScoped<IAboutService, AboutManager>();
+           services.AddScoped<IAboutDal, EfAboutDal>();
+           services.AddScoped<IAdminService, AdminManager>();
+           services.AddScoped<IAdminDal, EfAdminDal>();
+            return services;
+        }  
 
 
     }
